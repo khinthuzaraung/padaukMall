@@ -203,7 +203,7 @@
 	<div class="banner">
 		<div class="container">
 			<div class="banner-info animated wow zoomIn" data-wow-delay=".5s">
-				<h3>Free Online Shopping</h3>
+				<h3>Free Online Shopping Enjoy</h3>
 			</div>
 		</div>
 	</div>
