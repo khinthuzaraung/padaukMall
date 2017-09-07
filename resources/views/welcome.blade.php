@@ -47,8 +47,13 @@
 					<ul>
 						<!-- <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li> -->
+<<<<<<< HEAD
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.blade.php">Login</a></li>
 						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+=======
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register">Register</a></li>
+>>>>>>> fc1f0f40890f617296b52f908aa8e5f3809a06b1
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -63,7 +68,7 @@
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html"> Padauk Mall <span>Convenience & Smart</span></a></h1>
+					<h1><a href="#"> Padauk Mall <span>Convenience & Smart</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -78,7 +83,7 @@
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html" class="act">Home</a></li>	
+							<li class="active"><a href="#" class="act">Home</a></li>	
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -87,33 +92,33 @@
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<li><a href="products">Clothing</a></li>
+												<li><a href="products">Wallets</a></li>
+												<li><a href="products">Shoes</a></li>
+												<li><a href="products">Watches</a></li>
+												<li><a href="products">Accessories</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Women's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets,Bags</a></li>
-												<li><a href="products.html">Footwear</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
-												<li><a href="products.html">Jewellery</a></li>
-												<li><a href="products.html">Beauty & Grooming</a></li>
+												<li><a href="products">Clothing</a></li>
+												<li><a href="products">Wallets,Bags</a></li>
+												<li><a href="products">Footwear</a></li>
+												<li><a href="products">Watches</a></li>
+												<li><a href="products">Accessories</a></li>
+												<li><a href="products">Jewellery</a></li>
+												<li><a href="products">Beauty & Grooming</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Kid's Wear</h6>
-												<li><a href="products.html">Kids Home Fashion</a></li>
-												<li><a href="products.html">Boy's Clothing</a></li>
-												<li><a href="products.html">Girl's Clothing</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Brand Stores</a></li>
+												<li><a href="products">Kids Home Fashion</a></li>
+												<li><a href="products">Boy's Clothing</a></li>
+												<li><a href="products">Girl's Clothing</a></li>
+												<li><a href="products">Shoes</a></li>
+												<li><a href="products">Brand Stores</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -127,39 +132,39 @@
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Home Collection</h6>
-												<li><a href="furniture.html">Cookware</a></li>
-												<li><a href="furniture.html">Sofas</a></li>
-												<li><a href="furniture.html">Dining Tables</a></li>
-												<li><a href="furniture.html">Shoe Racks</a></li>
-												<li><a href="furniture.html">Home Decor</a></li>
+												<li><a href="furniture">Cookware</a></li>
+												<li><a href="furniture">Sofas</a></li>
+												<li><a href="furniture">Dining Tables</a></li>
+												<li><a href="furniture">Shoe Racks</a></li>
+												<li><a href="furniture">Home Decor</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Office Collection</h6>
-												<li><a href="furniture.html">Carpets</a></li>
-												<li><a href="furniture.html">Tables</a></li>
-												<li><a href="furniture.html">Sofas</a></li>
-												<li><a href="furniture.html">Shoe Racks</a></li>
-												<li><a href="furniture.html">Sockets</a></li>
-												<li><a href="furniture.html">Electrical Machines</a></li>
+												<li><a href="furniture">Carpets</a></li>
+												<li><a href="furniture">Tables</a></li>
+												<li><a href="furniture">Sofas</a></li>
+												<li><a href="furniture">Shoe Racks</a></li>
+												<li><a href="furniture">Sockets</a></li>
+												<li><a href="furniture">Electrical Machines</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Decorations</h6>
-												<li><a href="furniture.html">Toys</a></li>
-												<li><a href="furniture.html">Wall Clock</a></li>
-												<li><a href="furniture.html">Lighting</a></li>
-												<li><a href="furniture.html">Top Brands</a></li>
+												<li><a href="furniture">Toys</a></li>
+												<li><a href="furniture">Wall Clock</a></li>
+												<li><a href="furniture">Lighting</a></li>
+												<li><a href="furniture">Top Brands</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
 									</div>
 								</ul>
 							</li>
-							<li><a href="short-codes.html">Short Codes</a></li>
-							<li><a href="mail.html">Mail Us</a></li>
+							<li><a href="short-codes">Short Codes</a></li>
+							<li><a href="mail">Mail Us</a></li>
 						</ul>
 					</div>
 					</nav>
@@ -184,7 +189,7 @@
 				</div>
 				<div class="header-right">
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="checkout">
 							<h3> <div class="total">
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
 								<img src="images/bag.png" alt="" />
@@ -271,9 +276,9 @@
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single" class="product-image"><img src="images/7.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -296,7 +301,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Formal Shirt</a></h4>
+						<h4><a href="single">Formal Shirt</a></h4>
 						<p>Vel illum qui dolorem eum fugiat.</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$325</i> <span class="item_price">$250</span><a class="item_add" href="#">add to cart </a></p>
@@ -304,9 +309,9 @@
 					</div>
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/8.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single" class="product-image"><img src="images/8.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -329,7 +334,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Running Shoes</a></h4>
+						<h4><a href="single">Running Shoes</a></h4>
 						<p>Vel illum qui dolorem eum fugiat.</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$280</i> <span class="item_price">$150</span><a class="item_add" href="#">add to cart </a></p>
@@ -339,9 +344,9 @@
 				<div class="col-md-6 new-collections-grid">
 					<div class="new-collections-grid1 new-collections-grid1-image-width animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single" class="product-image"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos new-collections-grid1-image-pos1">
-								<a href="single.html">Quick View</a>
+								<a href="single">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right new-collections-grid1-right-rate">
 								<div class="rating">
@@ -367,7 +372,7 @@
 								<p>New</p>
 							</div>
 						</div>
-						<h4><a href="single.html">Dining Table</a></h4>
+						<h4><a href="single">Dining Table</a></h4>
 						<p>Vel illum qui dolorem eum fugiat.</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$580</i> <span class="item_price">$550</span><a class="item_add" href="#">add to cart </a></p>
@@ -377,9 +382,9 @@
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+									<a href="single" class="product-image"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
-										<a href="single.html">Quick View</a>
+										<a href="single">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
@@ -402,7 +407,7 @@
 										</div>
 									</div>
 								</div>
-								<h4><a href="single.html">Wall Lamp</a></h4>
+								<h4><a href="single">Wall Lamp</a></h4>
 								<p>Vel illum qui dolorem eum fugiat.</p>
 								<div class="new-collections-grid1-left simpleCart_shelfItem">
 									<p><i>$480</i> <span class="item_price">$400</span><a class="item_add" href="#">add to cart </a></p>
@@ -412,9 +417,9 @@
 						<div class="new-collections-grid1-sub">
 							<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 								<div class="new-collections-grid1-image">
-									<a href="single.html" class="product-image"><img src="images/9.jpg" alt=" " class="img-responsive" /></a>
+									<a href="single" class="product-image"><img src="images/9.jpg" alt=" " class="img-responsive" /></a>
 									<div class="new-collections-grid1-image-pos">
-										<a href="single.html">Quick View</a>
+										<a href="single">Quick View</a>
 									</div>
 									<div class="new-collections-grid1-right">
 										<div class="rating">
@@ -437,7 +442,7 @@
 										</div>
 									</div>
 								</div>
-								<h4><a href="single.html">Wall Lamp</a></h4>
+								<h4><a href="single">Wall Lamp</a></h4>
 								<p>Vel illum qui dolorem eum fugiat.</p>
 								<div class="new-collections-grid1-left simpleCart_shelfItem">
 									<p><i>$280</i> <span class="item_price">$150</span><a class="item_add" href="#">add to cart </a></p>
@@ -450,9 +455,9 @@
 				<div class="col-md-3 new-collections-grid">
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single" class="product-image"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -475,7 +480,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Pearl & Stone Anklet</a></h4>
+						<h4><a href="single">Pearl & Stone Anklet</a></h4>
 						<p>Vel illum qui dolorem eum fugiat.</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$180</i> <span class="item_price">$120</span><a class="item_add" href="#">add to cart </a></p>
@@ -483,9 +488,9 @@
 					</div>
 					<div class="new-collections-grid1 animated wow slideInUp" data-wow-delay=".5s">
 						<div class="new-collections-grid1-image">
-							<a href="single.html" class="product-image"><img src="images/11.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single" class="product-image"><img src="images/11.jpg" alt=" " class="img-responsive" /></a>
 							<div class="new-collections-grid1-image-pos">
-								<a href="single.html">Quick View</a>
+								<a href="single">Quick View</a>
 							</div>
 							<div class="new-collections-grid1-right">
 								<div class="rating">
@@ -508,7 +513,7 @@
 								</div>
 							</div>
 						</div>
-						<h4><a href="single.html">Stones Bangles</a></h4>
+						<h4><a href="single">Stones Bangles</a></h4>
 						<p>Vel illum qui dolorem eum fugiat.</p>
 						<div class="new-collections-grid1-left simpleCart_shelfItem">
 							<p><i>$340</i> <span class="item_price">$257</span><a class="item_add" href="#">add to cart </a></p>
@@ -525,7 +530,7 @@
 		<div class="container">
 			<div class="timer-grids">
 				<div class="col-md-8 timer-grid-left animated wow slideInLeft" data-wow-delay=".5s">
-					<h3><a href="products.html">sunt in culpa qui officia deserunt mollit</a></h3>
+					<h3><a href="products">sunt in culpa qui officia deserunt mollit</a></h3>
 					<div class="rating">
 						<div class="rating-left">
 							<img src="images/2.png" alt=" " class="img-responsive" />
@@ -609,40 +614,40 @@
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
 					<h3>Flickr Posts</h3>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="singl"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="single.html"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -650,20 +655,20 @@
 					<h3>Blog Posts</h3>
 					<div class="footer-grid-sub-grids">
 						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/9.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single"><img src="images/9.jpg" alt=" " class="img-responsive" /></a>
 						</div>
 						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">culpa qui officia deserunt</a></h4>
+							<h4><a href="single">culpa qui officia deserunt</a></h4>
 							<p>Posted On 25/3/2016</p>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="footer-grid-sub-grids">
 						<div class="footer-grid-sub-grid-left">
-							<a href="single.html"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
+							<a href="single"><img src="images/10.jpg" alt=" " class="img-responsive" /></a>
 						</div>
 						<div class="footer-grid-sub-grid-right">
-							<h4><a href="single.html">Quis autem vel eum iure</a></h4>
+							<h4><a href="single">Quis autem vel eum iure</a></h4>
 							<p>Posted On 25/3/2016</p>
 						</div>
 						<div class="clearfix"> </div>
