@@ -13,6 +13,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
+Route::get('login',function(){
+	return view('login');
+=======
 
 Route::get('login', function () {
     return view('login');
@@ -44,4 +48,5 @@ Route::get('mail', function () {
 
 Route::get('checkout', function () {
     return view('checkout');
+>>>>>>> fc1f0f40890f617296b52f908aa8e5f3809a06b1
 });
