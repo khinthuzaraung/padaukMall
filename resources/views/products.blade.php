@@ -48,8 +48,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.html">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.html">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.blade.php">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.blade.php">Register</a></li>
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
-					<h1><a href="index.html">Best Store <span>Shop anywhere</span></a></h1>
+					<h1><a href="welcome.blade.php">Best Store <span>Shop anywhere</span></a></h1>
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li><a href="index.html">Home</a></li>	
+							<li><a href="welcome.blade.php">Home</a></li>	
 							<!-- Mega Menu -->
 							 <li class="dropdown active">
 								<a href="#" class="dropdown-toggle act" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -88,33 +88,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
+												<li><a href="products.blade.php">Clothing</a></li>
+												<li><a href="products.blade.php">Wallets</a></li>
+												<li><a href="products.blade.php">Shoes</a></li>
+												<li><a href="products.blade.php">Watches</a></li>
+												<li><a href="products.blade.php">Accessories</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Women's Wear</h6>
-												<li><a href="products.html">Clothing</a></li>
-												<li><a href="products.html">Wallets,Bags</a></li>
-												<li><a href="products.html">Footwear</a></li>
-												<li><a href="products.html">Watches</a></li>
-												<li><a href="products.html">Accessories</a></li>
-												<li><a href="products.html">Jewellery</a></li>
-												<li><a href="products.html">Beauty & Grooming</a></li>
+												<li><a href="products.blade.php">Clothing</a></li>
+												<li><a href="products.blade.php">Wallets,Bags</a></li>
+												<li><a href="products.blade.php">Footwear</a></li>
+												<li><a href="products.blade.php">Watches</a></li>
+												<li><a href="products.blade.php">Accessories</a></li>
+												<li><a href="products.blade.php">Jewellery</a></li>
+												<li><a href="products.blade.php">Beauty & Grooming</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Kid's Wear</h6>
-												<li><a href="products.html">Kids Home Fashion</a></li>
-												<li><a href="products.html">Boy's Clothing</a></li>
-												<li><a href="products.html">Girl's Clothing</a></li>
-												<li><a href="products.html">Shoes</a></li>
-												<li><a href="products.html">Brand Stores</a></li>
+												<li><a href="products.blade.php">Kids Home Fashion</a></li>
+												<li><a href="products.blade.php">Boy's Clothing</a></li>
+												<li><a href="products.blade.php">Girl's Clothing</a></li>
+												<li><a href="products.blade.php">Shoes</a></li>
+												<li><a href="products.blade.php">Brand Stores</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -128,31 +128,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Home Collection</h6>
-												<li><a href="furniture.html">Cookware</a></li>
-												<li><a href="furniture.html">Sofas</a></li>
-												<li><a href="furniture.html">Dining Tables</a></li>
-												<li><a href="furniture.html">Shoe Racks</a></li>
-												<li><a href="furniture.html">Home Decor</a></li>
+												<li><a href="furniture.blade.php">Cookware</a></li>
+												<li><a href="furniture.blade.php">Sofas</a></li>
+												<li><a href="furniture.blade.php">Dining Tables</a></li>
+												<li><a href="furniture.blade.php">Shoe Racks</a></li>
+												<li><a href="furniture.blade.php">Home Decor</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Office Collection</h6>
-												<li><a href="furniture.html">Carpets</a></li>
-												<li><a href="furniture.html">Tables</a></li>
-												<li><a href="furniture.html">Sofas</a></li>
-												<li><a href="furniture.html">Shoe Racks</a></li>
-												<li><a href="furniture.html">Sockets</a></li>
-												<li><a href="furniture.html">Electrical Machines</a></li>
+												<li><a href="furniture.blade.php">Carpets</a></li>
+												<li><a href="furniture.blade.php">Tables</a></li>
+												<li><a href="furniture.blade.php">Sofas</a></li>
+												<li><a href="furniture.blade.php">Shoe Racks</a></li>
+												<li><a href="furniture.blade.php">Sockets</a></li>
+												<li><a href="furniture.blade.php">Electrical Machines</a></li>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Decorations</h6>
-												<li><a href="furniture.html">Toys</a></li>
-												<li><a href="furniture.html">Wall Clock</a></li>
-												<li><a href="furniture.html">Lighting</a></li>
-												<li><a href="furniture.html">Top Brands</a></li>
+												<li><a href="furniture.blade.php">Toys</a></li>
+												<li><a href="furniture.blade.php">Wall Clock</a></li>
+												<li><a href="furniture.blade.php">Lighting</a></li>
+												<li><a href="furniture.blade.php">Top Brands</a></li>
 											</ul>
 										</div>
 										<div class="clearfix"></div>
