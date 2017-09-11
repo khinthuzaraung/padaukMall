@@ -49,8 +49,8 @@
 						<!-- <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li> -->
 
-						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.blade.php">Login</a></li>
-						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.blade.php">Register</a></li>
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register">Register</a></li>
 
 						
 
