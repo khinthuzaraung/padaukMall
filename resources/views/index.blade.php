@@ -45,8 +45,15 @@
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
+
+						<!-- <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li> -->
+
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login">Login</a></li>
 						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register">Register</a></li>
+
+						
+
 
 					</ul>
 				</div>
@@ -611,7 +618,7 @@
 						<a href="single"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
-						<a href="singl"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
+						<a href="single"><img src="images/14.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
 						<a href="single"><img src="images/15.jpg" alt=" " class="img-responsive" /></a>
@@ -671,7 +678,9 @@
 				<div class="clearfix"> </div>
 			</div>
 			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
-				<h2><a href="/padauktest/public/">Best Store <span>shop anywhere</span></a></h2>
+
+				<h2><a href="index.blade.php">Padauk Mall<span>shop anywhere</span></a></h2>
+
 			</div>
 			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
 				<p>&copy 2016 Best Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>

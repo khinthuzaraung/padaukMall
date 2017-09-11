@@ -1,5 +1,6 @@
 <?php
-
+use App\Mail\Mail;
+use Illuminate\Mail\Mailable;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +16,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('login', function () {
-    return view('login');
+Route::get('login',function(){
+return view('login');
 });
 
 Route::get('register', function () {
@@ -50,7 +51,9 @@ Route::get('checkout', function () {
 
 
 
+
 Route::get('/register','Auth\RegisterController@formValidation');//Register Form Validation
 Route::post('/register','Auth\RegisterController@formValidationPost');//Register Form Validation
 Route::post('/login',['as'=> 'login','uses'=>'LoginController@postLogin']);
+
 

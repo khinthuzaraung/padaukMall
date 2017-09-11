@@ -46,8 +46,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
+
+						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
+						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
+
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login">Login</a></li>
 						<li class="active"><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register">Register</a></li>
+
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -77,7 +82,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li><a href="/padauktest/public/">Home</a></li>	
+
+							<li><a href="index">Home</a></li>	
+
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -86,16 +93,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
+
 												<li><a href="products">Clothing</a></li>
 												<li><a href="products">Wallets</a></li>
 												<li><a href="products">Shoes</a></li>
 												<li><a href="products">Watches</a></li>
 												<li><a href="products">Accessories</a></li>
+
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Women's Wear</h6>
+
 												<li><a href="products">Clothing</a></li>
 												<li><a href="products">Wallets,Bags</a></li>
 												<li><a href="products">Footwear</a></li>
@@ -103,16 +113,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="products">Accessories</a></li>
 												<li><a href="products">Jewellery</a></li>
 												<li><a href="products">Beauty & Grooming</a></li>
+
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Kid's Wear</h6>
+
 												<li><a href="products">Kids Home Fashion</a></li>
 												<li><a href="products">Boy's Clothing</a></li>
 												<li><a href="products">Girl's Clothing</a></li>
 												<li><a href="products">Shoes</a></li>
 												<li><a href="products">Brand Stores</a></li>
+
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -126,31 +139,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Home Collection</h6>
+
 												<li><a href="furniture">Cookware</a></li>
 												<li><a href="furniture">Sofas</a></li>
 												<li><a href="furniture">Dining Tables</a></li>
 												<li><a href="furniture">Shoe Racks</a></li>
 												<li><a href="furniture">Home Decor</a></li>
+
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Office Collection</h6>
+
 												<li><a href="furniture">Carpets</a></li>
 												<li><a href="furniture">Tables</a></li>
 												<li><a href="furniture">Sofas</a></li>
 												<li><a href="furniture">Shoe Racks</a></li>
 												<li><a href="furniture">Sockets</a></li>
 												<li><a href="furniture">Electrical Machines</a></li>
+>
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Decorations</h6>
+
 												<li><a href="furniture">Toys</a></li>
 												<li><a href="furniture">Wall Clock</a></li>
 												<li><a href="furniture">Lighting</a></li>
 												<li><a href="furniture">Top Brands</a></li>
+
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -202,7 +221,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+
 				<li><a href="/padauktest/public/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+
 				<li class="active">Register Page</li>
 			</ol>
 		</div>
@@ -226,6 +247,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<form class="animated wow slideInUp" data-wow-delay=".5s" action="register" method="post" autocomplete="on">
 				    <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 				    <div class="form-group {{ $errors->has('customer_name') ? 'has-error' : ''}}">
+
 				    <input type="text" name="customer_name" class="form-control" placeholder="Name...">
 				    	<span class="text-danger">{{ $errors->first('customer_name')}}</span>
 				    </div>
@@ -244,9 +266,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="form-gruop {{ $errors->has('customer_phone') ? 'has-error' : ''}}">
 					<input type="text" name="customer_phone" placeholder="Phone Number">
 					<span class="text-danger">{{ $errors->first('customer_phone')}}</span>
-					</div>
+					</div> 					
 					<div class="form-gruop {{ $errors->has('customer_contact') ? 'has-error' : ''}}">
-					<input type="text" name="customer_contact" placeholder="Address">
+					<input type="text" name="customer_contact" placeholder="Address" >
+
 					<span class="text-danger">{{ $errors->first('customer_contact')}}</span>
 					</div>
 					<div class="register-check-box">
@@ -286,6 +309,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-3 footer-grid animated wow slideInLeft" data-wow-delay=".7s">
 					<h3>Flickr Posts</h3>
 					<div class="footer-grid-left">
+
 						<a href="single"><img src="images/13.jpg" alt=" " class="img-responsive" /></a>
 					</div>
 					<div class="footer-grid-left">
@@ -320,6 +344,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="footer-grid-left">
 						<a href="single"><img src="images/16.jpg" alt=" " class="img-responsive" /></a>
+
 					</div>
 					<div class="clearfix"> </div>
 				</div>
@@ -331,6 +356,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="footer-grid-sub-grid-right">
 							<h4><a href="single">culpa qui officia deserunt</a></h4>
+
 							<p>Posted On 25/3/2016</p>
 						</div>
 						<div class="clearfix"> </div>
@@ -341,6 +367,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="footer-grid-sub-grid-right">
 							<h4><a href="single">Quis autem vel eum iure</a></h4>
+
 							<p>Posted On 25/3/2016</p>
 						</div>
 						<div class="clearfix"> </div>
@@ -349,7 +376,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="clearfix"> </div>
 			</div>
 			<div class="footer-logo animated wow slideInUp" data-wow-delay=".5s">
+
 				<h2><a href="/padauktest/public/">Best Store <span>shop anywhere</span></a></h2>
+
 			</div>
 			<div class="copy-right animated wow slideInUp" data-wow-delay=".5s">
 				<p>&copy 2016 Best Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>

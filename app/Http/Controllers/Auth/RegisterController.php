@@ -105,6 +105,7 @@ class RegisterController extends Controller
          'customer_phone.numeric' => 'Invalid Phone Number.',
          'customer_contact.required' => 'Address is required.',
          ]);
+
         $name=$request->input('customer_name');
         $email=$request->input('customer_email');
         $password=$request->input('customer_password');
@@ -126,4 +127,6 @@ class RegisterController extends Controller
     }
 
    
-}
+     }
+    
+

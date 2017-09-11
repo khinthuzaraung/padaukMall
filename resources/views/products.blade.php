@@ -48,8 +48,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<ul>
 						<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
 						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 <span>567</span> 892</li>
+<<<<<<< HEAD:resources/views/products.blade.php
+						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login.blade.php">Login</a></li>
+						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register.blade.php">Register</a></li>
+=======
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login">Login</a></li>
 						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register">Register</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 					</ul>
 				</div>
 				<div class="header-grid-right animated wow slideInRight" data-wow-delay=".5s">
@@ -64,7 +69,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="logo-nav">
 				<div class="logo-nav-left animated wow zoomIn" data-wow-delay=".5s">
+<<<<<<< HEAD:resources/views/products.blade.php
+					<h1><a href="welcome.blade.php">Best Store <span>Shop anywhere</span></a></h1>
+=======
 					<h1><a href="/padauktest/public/">Best Store <span>Shop anywhere</span></a></h1>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 				</div>
 				<div class="logo-nav-left1">
 					<nav class="navbar navbar-default">
@@ -79,7 +88,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
+<<<<<<< HEAD:resources/views/products.blade.php
+							<li><a href="welcome.blade.php">Home</a></li>	
+=======
 							<li><a href="/padauktest/public/">Home</a></li>	
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 							<!-- Mega Menu -->
 							 <li class="dropdown active">
 								<a href="#" class="dropdown-toggle act" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -88,16 +101,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
+<<<<<<< HEAD:resources/views/products.blade.php
+												<li><a href="products.blade.php">Clothing</a></li>
+												<li><a href="products.blade.php">Wallets</a></li>
+												<li><a href="products.blade.php">Shoes</a></li>
+												<li><a href="products.blade.php">Watches</a></li>
+												<li><a href="products.blade.php">Accessories</a></li>
+=======
 												<li><a href="products">Clothing</a></li>
 												<li><a href="products">Wallets</a></li>
 												<li><a href="products">Shoes</a></li>
 												<li><a href="products">Watches</a></li>
 												<li><a href="products">Accessories</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Women's Wear</h6>
+<<<<<<< HEAD:resources/views/products.blade.php
+												<li><a href="products.blade.php">Clothing</a></li>
+												<li><a href="products.blade.php">Wallets,Bags</a></li>
+												<li><a href="products.blade.php">Footwear</a></li>
+												<li><a href="products.blade.php">Watches</a></li>
+												<li><a href="products.blade.php">Accessories</a></li>
+												<li><a href="products.blade.php">Jewellery</a></li>
+												<li><a href="products.blade.php">Beauty & Grooming</a></li>
+=======
 												<li><a href="products">Clothing</a></li>
 												<li><a href="products">Wallets,Bags</a></li>
 												<li><a href="products">Footwear</a></li>
@@ -105,16 +135,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 												<li><a href="products">Accessories</a></li>
 												<li><a href="products">Jewellery</a></li>
 												<li><a href="products">Beauty & Grooming</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Kid's Wear</h6>
+<<<<<<< HEAD:resources/views/products.blade.php
+												<li><a href="products.blade.php">Kids Home Fashion</a></li>
+												<li><a href="products.blade.php">Boy's Clothing</a></li>
+												<li><a href="products.blade.php">Girl's Clothing</a></li>
+												<li><a href="products.blade.php">Shoes</a></li>
+												<li><a href="products.blade.php">Brand Stores</a></li>
+=======
 												<li><a href="products">Kids Home Fashion</a></li>
 												<li><a href="products">Boy's Clothing</a></li>
 												<li><a href="products">Girl's Clothing</a></li>
 												<li><a href="products">Shoes</a></li>
 												<li><a href="products">Brand Stores</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 											</ul>
 										</div>
 										<div class="clearfix"></div>
@@ -128,31 +167,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Home Collection</h6>
+<<<<<<< HEAD:resources/views/products.blade.php
+												<li><a href="furniture.blade.php">Cookware</a></li>
+												<li><a href="furniture.blade.php">Sofas</a></li>
+												<li><a href="furniture.blade.php">Dining Tables</a></li>
+												<li><a href="furniture.blade.php">Shoe Racks</a></li>
+												<li><a href="furniture.blade.php">Home Decor</a></li>
+=======
 												<li><a href="furniture">Cookware</a></li>
 												<li><a href="furniture">Sofas</a></li>
 												<li><a href="furniture">Dining Tables</a></li>
 												<li><a href="furniture">Shoe Racks</a></li>
 												<li><a href="furniture">Home Decor</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Office Collection</h6>
+<<<<<<< HEAD:resources/views/products.blade.php
+												<li><a href="furniture.blade.php">Carpets</a></li>
+												<li><a href="furniture.blade.php">Tables</a></li>
+												<li><a href="furniture.blade.php">Sofas</a></li>
+												<li><a href="furniture.blade.php">Shoe Racks</a></li>
+												<li><a href="furniture.blade.php">Sockets</a></li>
+												<li><a href="furniture.blade.php">Electrical Machines</a></li>
+=======
 												<li><a href="furniture">Carpets</a></li>
 												<li><a href="furniture">Tables</a></li>
 												<li><a href="furniture">Sofas</a></li>
 												<li><a href="furniture">Shoe Racks</a></li>
 												<li><a href="furniture">Sockets</a></li>
 												<li><a href="furniture">Electrical Machines</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">
 												<h6>Decorations</h6>
+<<<<<<< HEAD:resources/views/products.blade.php
+												<li><a href="furniture.blade.php">Toys</a></li>
+												<li><a href="furniture.blade.php">Wall Clock</a></li>
+												<li><a href="furniture.blade.php">Lighting</a></li>
+												<li><a href="furniture.blade.php">Top Brands</a></li>
+=======
 												<li><a href="furniture">Toys</a></li>
 												<li><a href="furniture">Wall Clock</a></li>
 												<li><a href="furniture">Lighting</a></li>
 												<li><a href="furniture">Top Brands</a></li>
+>>>>>>> a9b723cef6cab613ec98df0a6f3f4311f7ad7eff:resources/views/products.blade.php
 											</ul>
 										</div>
 										<div class="clearfix"></div>
