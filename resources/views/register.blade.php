@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-<title>Best Store a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Register :: w3layouts</title>
+<title>Registeration Form</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -173,7 +173,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</form>
 						</div>
 					</div>
-						<!-- search-scripts -->
+						<!-- search-scripts -->em
 						<script src="js/classie.js"></script>
 						<script src="js/uisearch.js"></script>
 							<script>
@@ -215,27 +215,49 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
 				deserunt mollit anim id est laborum.</p>
 			<div class="login-form-grids">
-				<h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5>
-				<form class="animated wow slideInUp" data-wow-delay=".5s">
-					<input type="text" placeholder="First Name..." required=" " >
-					<input type="text" placeholder="Last Name..." required=" " >
-				</form>
-				<div class="register-check-box animated wow slideInUp" data-wow-delay=".5s">
-					<div class="check">
-						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>Subscribe to Newsletter</label>
-					</div>
-				</div>
+				<!-- <h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5> -->
+				<!-- <form class="animated wow slideInUp" data-wow-delay=".5s" action="register">
+					
+				</form> -->
+				<!-- <div class="register-check-box animated wow slideInUp" data-wow-delay=".5s">
+					
+				</div> -->
 				<h6 class="animated wow slideInUp" data-wow-delay=".5s">Login information</h6>
-				<form class="animated wow slideInUp" data-wow-delay=".5s">
-					<input type="email" placeholder="Email Address" required=" " >
-					<input type="password" placeholder="Password" required=" " >
-					<input type="password" placeholder="Password Confirmation" required=" " >
+				<form class="animated wow slideInUp" data-wow-delay=".5s" action="register" method="post" autocomplete="on">
+				    <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
+				    <div class="form-group {{ $errors->has('customer_name') ? 'has-error' : ''}}">
+				    <input type="text" name="customer_name" class="form-control" placeholder="Name...">
+				    	<span class="text-danger">{{ $errors->first('customer_name')}}</span>
+				    </div>
+				    <div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
+					<input type="email" name="customer_email" placeholder="Email Address">
+					<span class="text-danger">{{ $errors->first('customer_email')}}</span>
+					</div>
+					<div class="form-gruop {{ $errors->has('customer_password') ? 'has-error' : ''}}">
+					<input type="password" name="customer_password" placeholder="Password ">
+					<span class="text-danger">{{ $errors->first('customer_password')}}</span>
+					</div>
+					<div class="form-gruop {{ $errors->has('customer_cpassword') ? 'has-error' : ''}}">
+					<input type="password" name="customer_cpassword" placeholder="Password Confirmation">
+					<span class="text-danger">{{ $errors->first('customer_cpassword')}}</span>
+					</div>
+					<div class="form-gruop {{ $errors->has('customer_phone') ? 'has-error' : ''}}">
+					<input type="text" name="customer_phone" placeholder="Phone Number">
+					<span class="text-danger">{{ $errors->first('customer_phone')}}</span>
+					</div>
+					<div class="form-gruop {{ $errors->has('customer_contact') ? 'has-error' : ''}}">
+					<input type="text" name="customer_contact" placeholder="Address">
+					<span class="text-danger">{{ $errors->first('customer_contact')}}</span>
+					</div>
 					<div class="register-check-box">
 						<div class="check">
 							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and conditions</label>
 						</div>
+						<div class="check">
+						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>Subscribe to Newsletter</label>
+						</div>
 					</div>
-					<input type="submit" value="Register">
+					<input type="submit" value="Register" >
 				</form>
 			</div>
 			<div class="register-home animated wow slideInUp" data-wow-delay=".5s">

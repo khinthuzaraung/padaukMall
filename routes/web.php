@@ -47,3 +47,10 @@ Route::get('checkout', function () {
     return view('checkout');
 
 });
+
+
+
+Route::get('/register','Auth\RegisterController@formValidation');//Register Form Validation
+Route::post('/register','Auth\RegisterController@formValidationPost');//Register Form Validation
+Route::post('/login',['as'=> 'login','uses'=>'LoginController@postLogin']);
+
