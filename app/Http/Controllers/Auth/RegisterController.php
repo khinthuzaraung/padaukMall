@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Mail;
+use App\Mail\MyTestMail;
 
 class RegisterController extends Controller
 {
@@ -121,9 +123,15 @@ class RegisterController extends Controller
         $customer_info->Customer_Contact=$contact;
         $customer_info->Flag=1;
         $customer_info->save();
-        return redirect()->route('login');
+        return redirect()->route('welcome-mail');
         dd('You are successfully added all fields.');
 
+    }
+      public function welcomeMail()
+    {
+        $to_email = 'thetthirisan1@gmail.com';
+        Mail::to($to_email)->send(new MyTestMail);
+        return "E-mail has been sent Successfully";  
     }
 
    

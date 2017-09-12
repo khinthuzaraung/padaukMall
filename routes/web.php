@@ -20,6 +20,10 @@ Route::get('login',function(){
 return view('login');
 });
 
+Route::get('reset',function(){
+return view('reset');
+});
+
 Route::get('register', function () {
     return view('register');
 });
@@ -54,6 +58,13 @@ Route::get('checkout', function () {
 
 Route::get('/register','Auth\RegisterController@formValidation');//Register Form Validation
 Route::post('/register','Auth\RegisterController@formValidationPost');//Register Form Validation
-Route::post('/login',['as'=> 'login','uses'=>'LoginController@postLogin']);
+Route::post('login',['as'=> 'login','uses'=>'LoginController@postLogin']);
+Route::post('/login','Auth\LoginController@doLogin');
+Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
+Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
+//Password reset routes
+//Route::get('reset',['as'=>'reset','uses'=>'Auth\ResetPasswordController@getPost']);
+Route::get('/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('/reset', 'Auth\ResetPasswordController@reset');
 
 

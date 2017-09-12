@@ -248,27 +248,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 				    <div class="form-group {{ $errors->has('customer_name') ? 'has-error' : ''}}">
 
-				    <input type="text" name="customer_name" class="form-control" placeholder="Name...">
+				    <input type="text" name="customer_name" class="form-control" placeholder="Name..." value="{{ old('customer_name') }}">
 				    	<span class="text-danger">{{ $errors->first('customer_name')}}</span>
 				    </div>
 				    <div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
-					<input type="email" name="customer_email" placeholder="Email Address">
+					<input type="email" name="customer_email" placeholder="Email Address" value="{{ old('customer_email') }}">
 					<span class="text-danger">{{ $errors->first('customer_email')}}</span>
 					</div>
 					<div class="form-gruop {{ $errors->has('customer_password') ? 'has-error' : ''}}">
-					<input type="password" name="customer_password" placeholder="Password ">
+					<input type="password" name="customer_password" placeholder="Password " value="{{ old('customer_password') }}">
 					<span class="text-danger">{{ $errors->first('customer_password')}}</span>
 					</div>
 					<div class="form-gruop {{ $errors->has('customer_cpassword') ? 'has-error' : ''}}">
-					<input type="password" name="customer_cpassword" placeholder="Password Confirmation">
+					<input type="password" name="customer_cpassword" placeholder="Password Confirmation" value="{{ old('customer_cpassword') }}">
 					<span class="text-danger">{{ $errors->first('customer_cpassword')}}</span>
 					</div>
 					<div class="form-gruop {{ $errors->has('customer_phone') ? 'has-error' : ''}}">
-					<input type="text" name="customer_phone" placeholder="Phone Number">
+					<input type="text" name="customer_phone" placeholder="Phone Number" value="{{ old('customer_phone') }}">
 					<span class="text-danger">{{ $errors->first('customer_phone')}}</span>
 					</div> 					
 					<div class="form-gruop {{ $errors->has('customer_contact') ? 'has-error' : ''}}">
-					<input type="text" name="customer_contact" placeholder="Address" >
+					<input type="text" name="customer_contact" placeholder="Address" value="{{ old('customer_contact') }}">
 
 					<span class="text-danger">{{ $errors->first('customer_contact')}}</span>
 					</div>

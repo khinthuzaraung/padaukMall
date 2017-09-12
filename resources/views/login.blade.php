@@ -214,12 +214,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Login Form</h3>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
 				deserunt mollit anim id est laborum.</p>
+
+			
+				     <div class="form-bottom clearfix">
+            @if (Session::has('message-login'))
+                <div class="alert alert-danger alert-dismissible " style="font-size:15px;">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    {{ Session::get('message-login') }}
+                </div>
+            @endif
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form>
-					<input type="email" placeholder="Email Address" required=" " >
-					<input type="password" placeholder="Password" required=" " >
+				<form action="login" method="post">
+				 <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
+				    <div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
+					<input type="email" name="customer_email" placeholder="Email Address">
+					<span class="text-danger">{{ $errors->first('customer_email')}}</span></div>
+					<div class="form-gruop {{ $errors->has('customer_password') ? 'has-error' : ''}}">
+					<input type="password" name="customer_password" placeholder="Password">
+					<span class="text-danger">{{ $errors->first('customer_password')}}</span></div>
 					<div class="forgot">
-						<a href="#">Forgot Password?</a>
+						<a href="reset">Forgot Password?</a>
 					</div>
 					<input type="submit" value="Login">
 				</form>
