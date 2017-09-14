@@ -64,7 +64,7 @@ Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
 Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
 //Password reset routes
 //Route::get('reset',['as'=>'reset','uses'=>'Auth\ResetPasswordController@getPost']);
-Route::get('/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('/reset', 'Auth\ResetPasswordController@reset');
+//Route::get('/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::post('/reset', 'Auth\ResetPasswordController@postEmail');
 
 

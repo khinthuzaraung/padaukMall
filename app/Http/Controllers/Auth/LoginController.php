@@ -58,7 +58,7 @@ class LoginController extends Controller
     {
         return Validator::make($data, [
             'customer_email' => 'required|email|max:255|unique:customer_info',
-            'customer_password' => 'required|min:6|confirmed',
+            'customer_password' => 'required|min:8|confirmed',
         ]);
     }
    
@@ -89,7 +89,7 @@ class LoginController extends Controller
             session([
                 'Customer_Email'=>$request->get('customer_email')
                 ]);
-       return redirect()->route('login');
+       return redirect()->route('index');
         }else{
             session::flash('message-login', "Invalid Email or Password , Please try again." );
             return redirect()->route('login');
