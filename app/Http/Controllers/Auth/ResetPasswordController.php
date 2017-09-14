@@ -44,6 +44,7 @@ class ResetPasswordController extends Controller
         $this->middleware('guest');
     }
 
+
 public function typeCode(Request $request){      
        
       $customer_info=new customer_info();

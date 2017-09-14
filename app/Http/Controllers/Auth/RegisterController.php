@@ -57,7 +57,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:6|confirmed',
+            'password' => 'required|min:8|confirmed',
         ]);
     }
 
@@ -86,9 +86,9 @@ class RegisterController extends Controller
         $this->validate($request,[
         'customer_name' => 'required|min:5|max:35',
         'customer_email' => 'required|email|unique:customer_info',
-        'customer_password' => 'required|min:5|max:20',
-        'customer_cpassword' => 'required|min:5|max:20|same:customer_password',
-        'customer_phone' => 'required|numeric',
+        'customer_password' => 'required|min:8|max:20',
+        'customer_cpassword' => 'required|min:8|max:20|same:customer_password',
+        'customer_phone' => 'required|int',
         'customer_contact' => 'required'
          ],[
          'customer_name.required' => 'Name is required.',
@@ -125,13 +125,16 @@ class RegisterController extends Controller
         $customer_info->save();
         return redirect()->route('welcome-mail');
         dd('You are successfully added all fields.');
+        return redirect()->route('login');
+
 
     }
       public function welcomeMail()
     {
-        $to_email = 'thetthirisan1@gmail.com';
+        $to_email = $request->input('customer_email');
         Mail::to($to_email)->send(new MyTestMail);
-        return "E-mail has been sent Successfully";  
+        return redirect()->route('login');
+        dd("Email has been sent Successfully");  
     }
 
    
