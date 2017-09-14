@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
 				<li><a href="/padauktest/public/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-				<li class="active">Forgotten Password Page</li>
+				<li class="active">Password Reset Page</li>
 			</ol>
 		</div>
 	</div>
@@ -54,11 +54,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- login -->
 	<div class="login">
 		<div class="container">
-			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Forgotten Password</h3>
-			<p class="est animated wow zoomIn" data-wow-delay=".5s">Please provide your email address in the field below and click "Submit". A temporary password will then be emailed directly to you shortly, please follow the instructions in the email.</p>
-
-			
-				     <div class="form-bottom clearfix">
+			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Password Reset</h3>
+			<div class="form-bottom clearfix">
             @if (Session::has('message-login'))
                 <div class="alert alert-danger alert-dismissible " style="font-size:15px;">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
@@ -66,10 +63,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             @endif
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form action="forgot" method="post">
+				<form method="post">
 				 <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 				    <div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
-					<input type="email" name="customer_email" placeholder="Email Address">
+					<input type="password" name="customer_email" placeholder="New Password">
+					<span class="text-danger">{{ $errors->first('customer_email')}}</span></div>
+					<div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
+					<input type="password" name="customer_email" placeholder="Confirm Password">
 					<span class="text-danger">{{ $errors->first('customer_email')}}</span></div>			
 					<input type="submit" value="Submit">
 				</form>

@@ -233,7 +233,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<input type="password" name="customer_password" placeholder="Password">
 					<span class="text-danger">{{ $errors->first('customer_password')}}</span></div>
 					<div class="forgot">
-						<a href="reset">Forgot Password?</a>
+						<a href="forgot">Forgot Password?</a>
 					</div>
 					<input type="submit" value="Login">
 				</form>

@@ -20,8 +20,17 @@ Route::get('login',function(){
 return view('login');
 });
 
-Route::get('reset',function(){
-return view('reset');
+Route::get('forgot',function(){
+return view('forgot');
+});
+
+Route::get('passwordreset',function(){
+return view('passwordreset');
+});
+
+Route::get('code', function () {
+    return view('code');
+
 });
 
 Route::get('register', function () {
@@ -64,7 +73,11 @@ Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
 Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
 //Password reset routes
 //Route::get('reset',['as'=>'reset','uses'=>'Auth\ResetPasswordController@getPost']);
-Route::get('/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
-Route::post('/reset', 'Auth\ResetPasswordController@reset');
+//Route::get('/reset/{token}', 'Auth\ResetPasswordController@showResetForm');
+Route::get('forgot',['as'=>'forgot','uses'=>'Auth\ForgotPasswordController@getEmail']);
+Route::post('forgot', 'Auth\ForgotPasswordController@postEmail');
+Route::get('code',['as'=> 'code','uses'=>'Auth\ForgotPasswordController@resetPassword']);
+Route::post('passwordreset',['as'=>'passwordreset','uses'=>'Auth\ResetPasswordController@typeCode']);
+Route::post('changeresetpwd',['as'=>'changeresetpwd','uses'=>'Auth\ResetPasswordController@changePassword']);
 
 

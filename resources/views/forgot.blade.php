@@ -56,15 +56,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Forgotten Password</h3>
 			<p class="est animated wow zoomIn" data-wow-delay=".5s">Please provide your email address in the field below and click "Submit". A temporary password will then be emailed directly to you shortly, please follow the instructions in the email.</p>
-
-			
-				     <div class="form-bottom clearfix">
-            @if (Session::has('message-login'))
+<div class="form-bottom clearfix">
+            @if (Session::has('email-error'))
                 <div class="alert alert-danger alert-dismissible " style="font-size:15px;">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    {{ Session::get('message-login') }}
+                    {{ Session::get('email-error') }}
                 </div>
             @endif
+			
+				    
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
 				<form action="forgot" method="post">
 				 <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
