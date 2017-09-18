@@ -7,20 +7,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-	@include('includes.head')
+@include('includes.head')
+<!-- //animation-effect -->
 </head>
 	
 <body>
 <!-- header -->
 	<div class="header">
-		@include('includes.header')
+@include('includes.header')
 	</div>
 <!-- //header -->
 <!-- breadcrumbs -->
 	<div class="breadcrumbs">
 		<div class="container">
 			<ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
-				<li><a href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+				<li><a href="/padauktest/public/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
 				<li class="active">Mail Us</li>
 			</ol>
 		</div>
@@ -66,8 +67,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- //mail -->
 <!-- footer -->
 	<div class="footer">
-		@include(includes.footer)
-	</div>
+		@include('includes.footer')
 <!-- //footer -->
 </body>
 </html>

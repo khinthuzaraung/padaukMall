@@ -12,64 +12,63 @@ use Illuminate\Mail\Mailable;
 |
 */
 Route::get('/', function () {
-    return view('index');
+return view('pages.index');
 });
 
 
 Route::get('login',function(){
-return view('login');
+return view('pages.login');
 });
 
 Route::get('forgot',function(){
-return view('forgot');
+return view('pages.forgot');
 });
 
 Route::get('passwordreset',function(){
-return view('passwordreset');
+return view('pages.passwordreset');
 });
 
 Route::get('code', function () {
-    return view('code');
+return view('pages.code');
 
 });
 
 Route::get('register', function () {
-    return view('register');
+return view('pages.register');
 });
 
 Route::get('products', function () {
-    return view('products');
+return view('pages.products');
 });
 
 Route::get('furniture', function () {
-    return view('furniture');
+return view('pages.furniture');
 });
 
 Route::get('single', function () {
-    return view('single');
+return view('pages.single');
 });
 
 Route::get('short-codes', function () {
-    return view('short-codes');
+return view('pages.short-codes');
 });
 
-Route::get('mail', function () {
-    return view('mail');
+Route::get('contact', function () {
+return view('pages.contact');
 });
 
 Route::get('checkout', function () {
-    return view('checkout');
-
+return view('pages.checkout');
 });
 
 
 
 
-Route::get('/register','Auth\RegisterController@formValidation');//Register Form Validation
-Route::post('/register','Auth\RegisterController@formValidationPost');//Register Form Validation
-Route::post('login',['as'=> 'login','uses'=>'LoginController@postLogin']);
-Route::post('/login','Auth\LoginController@doLogin');
-Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
+Route::get('pages/register','Auth\RegisterController@formValidation');//Register Form Validation
+Route::post('pages/register','Auth\RegisterController@formValidationPost');//Register Form Validation
+Route::post('pages/login',['as'=> 'login','uses'=>'LoginController@postLogin']);
+Route::post('pages/login','Auth\LoginController@doLogin');
+Route::post('pages/login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
 Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
 //Password reset routes
 //Route::get('reset',['as'=>'reset','uses'=>'Auth\ResetPasswordController@getPost']);

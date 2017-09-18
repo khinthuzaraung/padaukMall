@@ -1,0 +1,397 @@
+Women's Clothing & Accessories
+
+
+    Dresses
+    Blouses & Shirts
+    Hoodies & Sweatshirts
+    Sweaters
+    Jackets & Coats
+    Accessories
+    Bottoms
+    Rompers
+    Tops & Tees
+    Intimates
+    Jumpsuits
+    Bodysuits
+    Suits & Sets
+    Socks & Hosiery
+    Sleep & Lounge
+
+
+Men's Clothing & Accessories
+
+
+    Hoodies & Sweatshirts
+    Tops & Tees
+    Jackets & Coats
+    Pants
+    Shirts
+    Jeans
+    Underwear
+    Accessories
+    Sweaters
+    Suits & Blazers
+    Sleep & Lounge
+    Shorts
+    Socks
+    Men's Sets
+
+
+Cellphones & Telecommunications
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (3,'Mobile Phones'),(3,' Phone Bags & Cases'),(3,'Power Bank'),(3,'Mobile Phone Accessories'),(3,'Mobile Phone Parts'),(3,'Communication Equipments'),(3,'Underwear'),(3,'Accessories'),(3,'Sweaters'),(3,'Suits & Blazers'),(3,'Sleep & Lounge'),(3,'Shorts'),(3,'Socks'),(3,'Men's Sets'),(3,' Sleep & Lounge')
+
+    Mobile Phones
+    Phone Bags & Cases
+    Power Bank
+    Mobile Phone Accessories
+    Mobile Phone Parts
+    Communication Equipments
+
+
+Computer & Office
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (4,'Office Electronics'),(4,'Tablet'),(4,'Computer Components'),(4,'Tablet Accessories'),(4,'Computer Peripherals'),(4,'External Storage'),(4,'Networking'),(4,'Memory Cards & SSD'),(4,'Cables & Connectors'),(4,'Mini PC'),(4,'Demo Board & Accessories'),(4,'Desktops & Servers'),(4,'Industrial Computer & Accessories'),(4,'DIY Gaming PC'),(4,'Computer Cleaners'),(4,'Laptops'),(4,'Laptop Accessories'),(4,'Gaming Laptops')
+
+    Office Electronics
+    Tablet
+    Computer Components
+    Tablet Accessories
+    Computer Peripherals
+    External Storage
+    Networking
+    Memory Cards & SSD
+    Cables & Connectors
+    Mini PC
+    Demo Board & Accessories
+    Desktops & Servers
+    Industrial Computer & Accessories
+    DIY Gaming PC
+    Computer Cleaners
+    Laptops
+    Laptop Accessories
+    Gaming Laptops
+
+
+Consumer Electronics
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (5,'Camera & Photo'),(5,'Portable Audio & Video'),(5,'Home Audio & Video'),(5,'Smart Electronics'),(5,'Accessories & Parts'),(5,'Video Games'),(5,'Earphones & Headphones'),(5,'Camera Drones & Accessories'),(5,'Wearable Devices'),(5,'VR/AR Devices'),(5,'Sports & Action Video Cameras'),(5,'360° Video Cameras & Accessories'),(5,'Home Electronic Accessories'),(5,'DIY Gaming PC'),(5,'Computer Cleaners'),(5,'Laptops'),(5,'Laptop Accessories'),(5,'Gaming Laptops')
+
+    Camera & Photo
+    Portable Audio & Video
+    Home Audio & Video
+    Smart Electronics
+    Accessories & Parts
+    Electronic Cigarettes
+    Video Games
+    Earphones & Headphones
+    Camera Drones & Accessories
+    Wearable Devices
+    VR/AR Devices
+    Sports & Action Video Cameras
+    360° Video Cameras & Accessories
+    Home Electronic Accessories
+
+
+Jewelry & Accessories
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (6,'Fine Jewelry'),(6,'Necklaces & Pendants'),(6,'Earrings'),(6,'Rings'),(6,'Bracelets & Bangles'),(6,'Jewelry Sets & More'),(6,'Beads & Jewelry Making'),(6,'Wedding & Engagement Jewelry'),(6,'Wearable Devices'),(5,'VR/AR Devices'),(5,'Sports & Action Video Cameras'),(5,'360° Video Cameras & Accessories'),(5,'Home Electronic Accessories'),(5,'DIY Gaming PC'),(5,'Computer Cleaners'),(5,'Laptops'),(5,'Laptop Accessories'),(5,'Gaming Laptops')
+
+    Fine Jewelry
+    Necklaces & Pendants
+    Earrings
+    Rings
+    Bracelets & Bangles
+    Jewelry Sets & More
+    Beads & Jewelry Making
+    Wedding & Engagement Jewelry
+
+
+Home & Garden
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (7,'Kitchen,Dining & Bar'),(7,'Home Decor'),(7,' Home Textile'),(7,'Arts,Crafts & Sewing'),(7,'Festive & Party Supplies'),(7,'Bathroom Products'),(7,'Housekeeping & Organization'),(7,'Pet Products'),(7,'Garden Supplies'),(7,'Household Merchandises')
+
+    Kitchen,Dining & Bar
+    Home Decor
+    Home Textile
+    Arts,Crafts & Sewing
+    Festive & Party Supplies
+    Bathroom Products
+    Housekeeping & Organization
+    Pet Products
+    Garden Supplies
+    Household Merchandises
+
+
+Luggage & Bags
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Women's Bags
+    Men's Bags
+    Backpacks
+    Wallets
+    Kids & Baby's Bags
+    Luggage & Travel Bags
+    Functional Bags
+    Coin Purses & Holders
+    Bag Parts & Accessories
+
+
+Shoes
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (9,"Men's Shoes"),(9,"Men's Boots"),(9,'Shoe Accessories'),(9,'Men's Casual Shoes'),(9,'Women's Shoes'),(9,'Men's Vulcanize Shoes'),(9,'Women's Boots'),(9,'Women's Flats'),(9,'Women's Pumps'),(9,'Women's Vulcanize Shoes')
+
+    Men's Shoes
+    Men's Boots
+    Shoe Accessories
+    Men's Casual Shoes
+    Women's Shoes
+    Men's Vulcanize Shoes
+    Women's Boots
+    Women's Flats
+    Women's Pumps
+    Women's Vulcanize Shoes
+
+
+Mother & Kids
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (10,'Baby Girls Clothing'),(10,'Baby Boys Clothing'),(10,'Girls Clothing'),(10,'Boys Clothing'),(10,'Baby Shoes'),(10,'Children's Shoes'),(10,'Baby Care'),(10,'Activity & Gear'),(10,'Safety'),(10,'Baby Bedding'),(10,'Feeding'),(10,'Maternity'),(10,'Family Matching Outfits')
+
+    Baby Girls Clothing
+    Baby Boys Clothing
+    Girls Clothing
+    Boys Clothing
+    Baby Shoes
+    Children's Shoes
+    Baby Care
+    Activity & Gear
+    Safety
+    Baby Bedding
+    Feeding
+    Maternity
+    Family Matching Outfits
+
+
+Sports & Entertainment
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Sports Bags
+    Sneakers
+    Sport Accessories
+    Team Sports
+    Racquet Sports
+    Bowling
+    Camping & Hiking
+    Cycling
+    Entertainment
+    Fishing
+    Fitness & Body Building
+    Golf
+    Horse Racing
+    Hunting
+    Musical Instruments
+    Other Sports & Entertainment Products
+    Roller,Skate board &Scooters
+    Running
+    Shooting
+    Skiing & Snowboarding
+    Sports Clothing
+    Swimming
+    Water Sports
+
+
+Beauty & Health
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Nails & Tools
+    Makeup
+    Health Care
+    Skin Care
+    Hair Care & Styling
+    Shaving & Hair Removal
+    Sex Products
+    Beauty Essentials
+    Tattoo & Body Art
+    Bath & Shower
+    Fragrances & Deodorants
+    Oral Hygiene
+    Sanitary Paper
+    Tools & Accessories
+
+
+Watches
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Men's Watches
+    Women's Watches
+    Lover's Watches
+    Children's Watches
+    Pocket & Fob Watches
+    Watch Accessories
+    Women's Bracelet Watches
+
+
+
+
+Toys & Hobbies
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Remote Control Toys
+    Dolls & Stuffed Toys
+    Classic Toys
+    Learning & Education
+    Outdoor Fun & Sports
+    Action & Toy Figures
+    Models & Building Toy
+    Diecasts & Toy Vehicles
+    Baby Toys
+    Electronic Toys
+    Puzzles & Magic Cubes
+    Novelty & Gag Toys
+    Stress Relief Toy
+
+
+Weddings & Events
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Wedding Dresses
+    Evening Dresses
+    Prom Dresses
+    Wedding Party Dress
+    Wedding Accessories
+    Celebrity-Inspired Dresses
+    Cocktail Dresses
+    Homecoming Dresses
+    Bridesmaid Dresses
+    Mother of the Bride Dresses
+    Quinceanera Dresses
+
+
+Novelty & Special Use
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Costumes & Accessories
+    Exotic Apparel
+    Stage & Dance Wear
+    Traditional & Cultural Wear
+    Work Wear & Uniforms
+
+
+Automobiles & Motorcycles
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Car Lights
+    Auto Replacement Parts
+    Car Electronics
+    Interior Accessories
+    Car Repair Tools
+    Motorcycle Accessories & Parts
+    Exterior Accessories
+    Car Wash & Maintenance
+    ATV,RV,Boat & Other Vehicle
+    Travel & Roadway Product
+
+
+Lights & Lighting
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Lamps & Shades
+    Ceiling Lights & Fans
+    Light Bulbs
+    LED Lighting
+    Outdoor Lighting
+    LED Lamps
+    Portable Lighting
+    Commercial Lighting
+    Night Lights
+    Book Lights
+    Professional Lighting
+    Novelty Lighting
+    Holiday Lighting
+    Lighting Accessories
+
+
+Furniture
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Home Furniture
+    Office Furniture
+    Children Furniture
+    Outdoor Furniture
+    Commercial Furniture
+    Café Furniture
+    Bar Furniture
+    Furniture Accessories
+    Furniture Hardware
+    Furniture Parts
+
+
+Electronic Components & Supplies
+
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+    Active Components
+    EL Products
+    Electronic Accessories & Supplies
+    Electronic Data Systems
+    Electronic Signs
+    Electronics Production Machinery
+    Electronics Stocks
+    Optoelectronic Displays
+    Other Electronic Components
+    Passive Components
+
+
+Office & School Supplies
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Adhesives & Tapes
+    Books
+    Calendars, Planners & Cards
+    Cutting Supplies
+    Desk Accessories & Organizer
+    Filing Products
+    Labels, Indexes & Stamps
+    Mail & Shipping Supplies
+    Notebooks & Writing Pads
+    Office Binding Supplies
+    Other Office & School Supplies
+    Pens, Pencils & Writing Supplies
+    Presentation Boards
+    School & Educational Supplies
+
+
+Home Improvement
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Lights & Lighting
+    Tools
+    Home Appliances
+    Security & Protection
+    Bathroom Fixtures
+    Kitchen Fixtures
+    Hardware
+    Electrical Equipment & Supplies
+    Building Supplies
+    Plumbing
+
+
+Security & Protection
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Video Surveillance
+    Security Alarm
+    Access Control
+    Workplace Safety Supplies
+    Door Intercom
+    Self Defense Supplies
+    Smart Card System
+    Building Automation
+    Fire Protection
+    Emergency Kits
+    Roadway Safety
+    Safes
+    Lightning Protection
+    Transmission & Cables
+
+
+Hair Extensions & Wigs
+INSERT INTO `sub_category`(`parent_id`, `subcatergory_name`) VALUES (8,"Women's Bags"),(8,"Men's Bags"),(8,' Backpacks'),(8,'Wallets'),(8,'Kids & Baby's Bags'),(8,'Luggage & Travel Bags'),(8,'Functional Bags'),(8,'Coin Purses & Holders'),(8,'Bag Parts & Accessories'),(8,'Household Merchandises')
+
+    Human Hair
+    Wigs
+    Synthetic Hair
+    Accessories & Tools
+

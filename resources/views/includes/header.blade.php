@@ -123,7 +123,7 @@
 								</ul>
 							</li>
 							<li><a href="short-codes">Short Codes</a></li>
-							<li><a href="mail">Mail Us</a></li>
+							<li><a href="contact">Mail Us</a></li>
 						</ul>
 					</div>
 					</nav>
