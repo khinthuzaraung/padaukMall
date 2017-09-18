@@ -12,7 +12,15 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Mail;
-use App\Mail\MyTestMail;
+use DB;
+use View;
+use Session;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Hash;
+use App\Mail\WelcomeMail;
+use Illuminate\Http\File;
+use Illuminate\Support\Facades\Storage;
+
 
 class RegisterController extends Controller
 {
@@ -78,22 +86,28 @@ class RegisterController extends Controller
 
     public function formValidation()
     {
-        return view('register');
+        $gender = DB::table('gender')->get();
+        return View::make("register")->with('gender',$gender);
+       // return view('register');
     }
 
     public function formValidationPost(request $request)
-    {
+    {   
+
         $this->validate($request,[
         'customer_name' => 'required|min:5|max:35',
+        'gender' => 'required',
         'customer_email' => 'required|email|unique:customer_info',
         'customer_password' => 'required|min:8|max:20',
         'customer_cpassword' => 'required|min:8|max:20|same:customer_password',
         'customer_phone' => 'required|int',
-        'customer_contact' => 'required'
+        'customer_contact' => 'required',
+        'checkbox'=>'required',
          ],[
          'customer_name.required' => 'Name is required.',
          'customer_name.min' => 'The Name field must be at least 5 characters.',
          'customer_name.max' => 'The Name field may not be greater than 35 characters.',  
+         'gender.required' => 'Gender is required',
          'customer_email.required' => 'Email is required.',      
          'customer_email.unique' => 'Your email has already existed.', 
          'customer_password.required' => 'Password is required.',        
@@ -106,33 +120,40 @@ class RegisterController extends Controller
          'customer_phone.required' => 'Phone Number is required.',
          'customer_phone.numeric' => 'Invalid Phone Number.',
          'customer_contact.required' => 'Address is required.',
+         'checkbox.required'=>'Please Read Teams and Conditons.'
          ]);
 
         $name=$request->input('customer_name');
+        Session::put('welcome-name',$name);
+        $gender=$request->input('gender');
         $email=$request->input('customer_email');
-        $password=$request->input('customer_password');
-        $cpassword=$request->input('customer_cpassword');
+        Session::put('welcome-mail',$email);
+        $password=Hash::make($request->input('customer_password'));
+        $cpassword=Hash::make($request->input('customer_cpassword'));
         $phone=$request->input('customer_phone');
         $contact=$request->input('customer_contact');
+        $termscond=$request->input('checkbox');
         $customer_info=new customer_info;
         $customer_info->Customer_Name=$name;
+        $customer_info->gender_id=$gender;
         $customer_info->Customer_Email=$email;
         $customer_info->Password=$password;
         $customer_info->Confirm_Password=$cpassword;
         $customer_info->Customer_Phone=$phone;
         $customer_info->Customer_Contact=$contact;
+        $customer_info->type_id=2;
         $customer_info->Flag=1;
+        $customer_info->Terms_condition= $termscond;
         $customer_info->save();
         return redirect()->route('welcome-mail');
         dd('You are successfully added all fields.');
-        return redirect()->route('login');
-
-
+        
     }
-      public function welcomeMail()
+    
+      public function welcomeMail(request $request)
     {
-        $to_email = $request->input('customer_email');
-        Mail::to($to_email)->send(new MyTestMail);
+        $to_email = Session::get('welcome-mail');
+        Mail::to($to_email)->send(new WelcomeMail);
         return redirect()->route('login');
         dd("Email has been sent Successfully");  
     }

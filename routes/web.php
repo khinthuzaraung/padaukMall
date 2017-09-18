@@ -80,5 +80,10 @@ Route::post('forgot', 'Auth\ForgotPasswordController@postEmail');
 Route::get('code',['as'=> 'code','uses'=>'Auth\ForgotPasswordController@resetPassword']);
 Route::post('passwordreset',['as'=>'passwordreset','uses'=>'Auth\ResetPasswordController@typeCode']);
 Route::post('changeresetpwd',['as'=>'changeresetpwd','uses'=>'Auth\ResetPasswordController@changePassword']);
+// Route::get('/register',function()
+// {
+// 	$gender=DB::table('gender')->get();
+// 	return view::make('gender')->with('gender',$gender);
+// });
 
 

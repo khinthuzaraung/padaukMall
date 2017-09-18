@@ -32,23 +32,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="register">
 		<div class="container">
 			<h3 class="animated wow zoomIn" data-wow-delay=".5s">Register Here</h3>
-			<p class="est animated wow zoomIn" data-wow-delay=".5s">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
-				deserunt mollit anim id est laborum.</p>
 			<div class="login-form-grids">
-				<!-- <h5 class="animated wow slideInUp" data-wow-delay=".5s">profile information</h5> -->
-				<!-- <form class="animated wow slideInUp" data-wow-delay=".5s" action="register">
-					
-				</form> -->
-				<!-- <div class="register-check-box animated wow slideInUp" data-wow-delay=".5s">
-					
-				</div> -->
 				<h6 class="animated wow slideInUp" data-wow-delay=".5s">Login information</h6>
-				<form class="animated wow slideInUp" data-wow-delay=".5s" action="register" method="post" autocomplete="on">
+				<form class="animated wow slideInUp" data-wow-delay=".5s" action="register" method="post" autocomplete="on"  enctype="multipart/form-data">
 				    <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 				    <div class="form-group {{ $errors->has('customer_name') ? 'has-error' : ''}}">
-
 				    <input type="text" name="customer_name" class="form-control" placeholder="Name..." value="{{ old('customer_name') }}">
 				    	<span class="text-danger">{{ $errors->first('customer_name')}}</span>
+				    </div>
+				    <div class="form-group {{ $errors->has('gender') ? 'has-error' : ''}}">
+				    	<?php foreach ($gender as $gender) {?>
+				    	<input type="radio" name="gender" value="<?php echo $gender->gender_id;?>">
+				    	<?php echo $gender->name; }?>
+				   <!-- Female
+				    <input type="radio" name="gender" value="2">Male -->
+
+				    <span class="text-danger">{{ $errors->first('gender')}}</span>
 				    </div>
 				    <div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
 					<input type="email" name="customer_email" placeholder="Email Address" value="{{ old('customer_email') }}">
@@ -71,13 +70,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 					<span class="text-danger">{{ $errors->first('customer_contact')}}</span>
 					</div>
+<!-- 					<input type="file" name="uploadedimage"> -->
+                   <!--  <div class="form-group">
+                        <label for="file">Photo:</label>
+                        <input type="file" name="file" id="file" class="form-control" value="{{old('file')}}">
+                    </div> -->
+                    <div class="form-gruop {{ $errors->has('checkbox') ? 'has-error' : ''}}">
+					<span class="text-danger">{{ $errors->first('checkbox')}}</span>
+					</div>
 					<div class="register-check-box">
 						<div class="check">
-							<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and conditions</label>
+							<label class="checkbox"><input type="checkbox" name="checkbox" value="1"><i> </i>I accept the terms and conditions</label>
 						</div>
-						<div class="check">
+						<!-- <div class="check">
 						<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>Subscribe to Newsletter</label>
-						</div>
+						</div> -->
 					</div>
 					<input type="submit" value="Register" >
 				</form>
