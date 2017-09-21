@@ -61,14 +61,17 @@ Route::get('checkout', function () {
 return view('pages.checkout');
 });
 
+// route to process the form
 
+Route::post('login', 'Auth\LoginController@doLogin');
 
+Route::get('logout',  'Auth\LoginController@doLogout');
 
 Route::get('pages/register','Auth\RegisterController@formValidation');//Register Form Validation
 Route::post('pages/register','Auth\RegisterController@formValidationPost');//Register Form Validation
-Route::post('pages/login',['as'=> 'login','uses'=>'LoginController@postLogin']);
-Route::post('pages/login','Auth\LoginController@doLogin');
-Route::post('pages/login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
+//Route::post('login',['as'=> 'login','uses'=>'LoginController@postLogin']);
+//Route::post('login','Auth\LoginController@doLogin');
+//Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
 Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
 //Password reset routes
 //Route::get('reset',['as'=>'reset','uses'=>'Auth\ResetPasswordController@getPost']);

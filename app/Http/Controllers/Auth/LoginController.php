@@ -15,6 +15,8 @@ use App\customer_info;
 use DB;
 use Illuminate\Support\Facades\Input;
 use Session;
+use Auth;
+use redirect;
 
 class LoginController extends Controller
 {
@@ -48,55 +50,51 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+    
+    public function doLogout()
     {
-        return Validator::make($data, [
-            'customer_email' => 'required|email|max:255|unique:customer_info',
-            'customer_password' => 'required|min:8|confirmed',
-        ]);
-    }
-   
-    public function postLogin(request $request)
-    {
-   
+        Auth::logout();//logging out user
+        return redirect::to($redirectTo);
     }
 
-    public function doLogin(request $request)
+    public function doLogin()
     {
-         $this->validate($request,[
-            'customer_email' => 'required|email',
-            'customer_password' => 'required',
-        ],[
-            'customer_email.required' => 'Email is required.',  
-            'customer_password.required' => 'Password is required.', 
-           
-        ]);
-        $customer_info=new customer_info();
-        $email=$request->input('customer_email');
-        $password=$request->input('customer_password');
-        //$customer_info=Customer_info::where('Customer_Email',$email)->first();
-        $customer_info=DB::table('customer_info')
-                        ->where('Customer_Email','=',$email)
-                        ->where('Password','=',$password)
-                        ->first();
-        if($customer_info){           
-            session([
-                'Customer_Email'=>$request->get('customer_email')
-                ]);
-       //return redirect()->route('index');
-            return view('index');
-        }else{
-            session::flash('message-login', "Invalid Email or Password , Please try again." );
-            return redirect()->route('login');
-       
-                
-        }
+         $rules=array('email' =>'required|email' ,
+                      'password' => 'required|alphaNum|min:8');
+         $Validator=Validator::make(Input::all(),$rules);
+                    if ($validator->fails())
+                {
+                return Redirect::to('login')->withErrors($validator) // send back all errors to the login form
+                ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
+                }
+              else
+                {
+ 
+                // create our user data for the authentication
+ 
+                $userdata = array(
+                    'email' => Input::get('email') ,
+                    'password' => Input::get('password')
+                );
+ 
+                // attempt to do the login
+ 
+                if (Auth::attempt($userdata))
+                    {
+ 
+                    // validation successful
+                    // do whatever you want on success
+                        return Redirect::to('index');
+ 
+                    }
+                  else
+                    {
+ 
+                    // validation not successful, send back to form
+ 
+                    return Redirect::to('checklogin');
+                    }
+                }
     }
             
   
