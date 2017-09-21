@@ -87,7 +87,7 @@ class RegisterController extends Controller
     public function formValidation()
     {
         $gender = DB::table('gender')->get();
-        return View::make("register")->with('gender',$gender);
+        return View::make("pages.register")->with('gender',$gender);
        // return view('register');
     }
 

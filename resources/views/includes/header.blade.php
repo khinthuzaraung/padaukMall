@@ -3,12 +3,15 @@
 			<div class="header-grid">
 				<div class="header-grid-left animated wow slideInLeft" data-wow-delay=".5s">
 					<ul>
-
-						<!-- <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">@example.com</a></li>
-						<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 892</li> -->
-
+						<?php
+						 $CustomerName = Session::get('CustomerName');
+					     if(isset($CustomerName)){?>
+					     <h3>Welcome <?php echo $CustomerName; ?>,</h3>
+					     <li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="logout">Logout</a></li>
+					    <?php }else{ ?>						
 						<li><i class="glyphicon glyphicon-log-in" aria-hidden="true"></i><a href="login">Login</a></li>
 						<li><i class="glyphicon glyphicon-book" aria-hidden="true"></i><a href="register">Register</a></li>
+						<?php } ?>
 
 						
 

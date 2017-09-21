@@ -13,6 +13,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\Auth;
 use App\customer_info;
 use DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Session;
 
@@ -64,7 +65,7 @@ class LoginController extends Controller
    
     public function postLogin(request $request)
     {
-   
+       return view('pages.login');
     }
 
     public function doLogin(request $request)
@@ -80,18 +81,24 @@ class LoginController extends Controller
         $customer_info=new customer_info();
         $email=$request->input('customer_email');
         $password=$request->input('customer_password');
-        //$customer_info=Customer_info::where('Customer_Email',$email)->first();
+       
+        $customer_info=Customer_info::where('Customer_Email',$email)->first();
         $customer_info=DB::table('customer_info')
                         ->where('Customer_Email','=',$email)
-                        ->where('Password','=',$password)
+                        //->where('Password','=',$password)
                         ->first();
-        if($customer_info){           
-            session([
-                'Customer_Email'=>$request->get('customer_email')
-                ]);
-       //return redirect()->route('index');
-            return view('index');
+
+         
+        if($customer_info && Hash::check($password,$customer_info->Password)) {
+   
+        
+           Session::put('CustomerName',$customer_info->Customer_Name);
+            
+     
+            return view('pages.index');
+        
         }else{
+           
             session::flash('message-login', "Invalid Email or Password , Please try again." );
             return redirect()->route('login');
        
