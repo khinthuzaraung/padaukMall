@@ -13,6 +13,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Support\Facades\Auth;
 use App\customer_info;
 use DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Session;
 use Auth;
@@ -53,13 +54,18 @@ class LoginController extends Controller
     
     public function doLogout()
     {
-        Auth::logout();//logging out user
-        return redirect::to($redirectTo);
+
+        /*Auth::logout();//logging out user
+        return redirect::to($redirectTo);*/
+
+       return view('pages.login');
+
     }
 
     public function doLogin()
     {
-         $rules=array('email' =>'required|email' ,
+
+        /* $rules=array('email' =>'required|email' ,
                       'password' => 'required|alphaNum|min:8');
          $Validator=Validator::make(Input::all(),$rules);
                     if ($validator->fails())
@@ -94,7 +100,43 @@ class LoginController extends Controller
  
                     return Redirect::to('checklogin');
                     }
-                }
+                }*/
+
+         $this->validate($request,[
+            'customer_email' => 'required|email',
+            'customer_password' => 'required',
+        ],[
+            'customer_email.required' => 'Email is required.',  
+            'customer_password.required' => 'Password is required.', 
+           
+        ]);
+        $customer_info=new customer_info();
+        $email=$request->input('customer_email');
+        $password=$request->input('customer_password');
+       
+        $customer_info=Customer_info::where('Customer_Email',$email)->first();
+        $customer_info=DB::table('customer_info')
+                        ->where('Customer_Email','=',$email)
+                        //->where('Password','=',$password)
+                        ->first();
+
+         
+        if($customer_info && Hash::check($password,$customer_info->Password)) {
+   
+        
+           Session::put('CustomerName',$customer_info->Customer_Name);
+            
+     
+            return view('pages.index');
+        
+        }else{
+           
+            session::flash('message-login', "Invalid Email or Password , Please try again." );
+            return redirect()->route('login');
+       
+                
+        }
+
     }
             
   

@@ -51,7 +51,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<input type="password" name="customer_password" placeholder="Password">
 					<span class="text-danger">{{ $errors->first('customer_password')}}</span></div>
 					<div class="forgot">
-						<a href="forgot">Forgot Password?</a>
+						<a href="forgotten">Forgot Password?</a>
 					</div>
 					<input type="submit" value="Login">
 				</form>

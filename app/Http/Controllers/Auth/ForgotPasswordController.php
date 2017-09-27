@@ -36,7 +36,7 @@ class ForgotPasswordController extends Controller
     }
      public function getEmail(Request $request){
    
-          return view('forgot');
+          return view('pages.forgot');
       }
        
      
@@ -56,11 +56,11 @@ class ForgotPasswordController extends Controller
         $cus_email=Session::get('cus_email');
         if(empty($cus_email)){
            session::flash('email-error',"Your email doesn't exist.Please type correctly..........");
-           return redirect()->route('forgot');
+           return redirect()->route('forgotten');
         }else{
            $to_email = $email;
            Mail::to($to_email)->send(new PasswordResetMail);
-           return redirect()->route('code');
+           return redirect()->route('getcode');
         }
 }
 
@@ -77,7 +77,7 @@ class ForgotPasswordController extends Controller
       Session::put('random',$string);
       $resetcode=Session::get('random');   
       var_dump($resetcode);         
-      return view('code');
+      return view('pages.code');
 
 }
 

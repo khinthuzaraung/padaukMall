@@ -64,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             @endif		
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form action="passwordreset" method="post">
+				<form action="pwdreset" method="post">
 				 <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 
 					<input type="text" name="customer_code" placeholder="Code here">							

@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			
 				    
 			<div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-				<form action="forgot" method="post">
+				<form action="forgotten" method="post">
 				 <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
 				    <div class="form-gruop {{ $errors->has('customer_email') ? 'has-error' : ''}}">
 					<input type="email" name="customer_email" placeholder="Email Address">
