@@ -15,6 +15,10 @@ Route::get('/', function () {
 return view('pages.index');
 });
 
+Route::get('index', function () {
+return view('pages.index');
+});
+
 Route::get('login',function(){
 return view('pages.login');
 });
@@ -60,6 +64,9 @@ Route::get('checkout', function () {
 return view('pages.checkout');
 });
 
+Route::get('sidebar', function () {
+return view('pages.sidebar');
+});
 
 
 
@@ -76,6 +83,8 @@ Route::get('pwdreset',['as'=>'pwdreset','uses'=>'Auth\ResetPasswordController@ri
 Route::post('pwdreset',['as'=>'pwdreset','uses'=>'Auth\ResetPasswordController@typeCode']);
 Route::post('changeresetpwd',['as'=>'changeresetpwd','uses'=>'Auth\ResetPasswordController@changePassword']);
 Route::get('logout','Auth\LogoutController@doLogout');
+Route::get('sidebar','CategoryController@categoryData');
+
 
 
 
