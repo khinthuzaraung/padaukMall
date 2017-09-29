@@ -45,13 +45,32 @@
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
+
 							<li class="active"><a href="index" class="act">Home</a></li>	
+
+						
+
 							<!-- Mega Menu -->
 							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+								<a href="/padaukmall/products" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
 								<ul class="dropdown-menu multi-column columns-3">
 									<div class="row">
 										<div class="col-sm-4">
+											<ul>@if(!empty($menu))
+@foreach($menu as $item)
+    <li>
+        <a href="{{$item->url}}">{{$item->menu_name}}</a>
+        @if ($item->submenu->count()) 
+            <ul class="multi-column-dropdown">
+            @foreach ($item->submenu as $subitem)
+                <li><a href="{{$subitem->url}}">{{$subitem->menu_name}}</a></li>
+            @endforeach
+            </ul>
+        @endif
+    </li>
+@endforeach
+@endif
+</ul>
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
 												<li><a href="products">Clothing</a></li>

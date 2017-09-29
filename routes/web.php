@@ -86,5 +86,3 @@ Route::get('logout','Auth\LogoutController@doLogout');
 Route::get('sidebar','CategoryController@categoryData');
 
 
-
-

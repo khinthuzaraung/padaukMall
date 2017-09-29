@@ -7,6 +7,7 @@
     <!-- header -->
     <div class="header">
 		@include('includes.header')
+		
 	</div>
 	<!-- //header -->
 	<!-- banner -->

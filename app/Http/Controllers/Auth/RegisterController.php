@@ -17,9 +17,9 @@ use View;
 use Session;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
-use App\Mail\WelcomeMail;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Register;
 
 
 class RegisterController extends Controller
@@ -54,44 +54,15 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|min:8|confirmed',
-        ]);
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return User
-     */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-    }
-
-    public function formValidation()
+   
+    public function GetGender()
     {
         $gender = DB::table('gender')->get();
         return View::make("pages.register")->with('gender',$gender);
-       // return view('register');
+       
     }
 
-    public function formValidationPost(request $request)
+    public function formValidationPost(Request $request)
     {   
 
         $this->validate($request,[
@@ -100,7 +71,7 @@ class RegisterController extends Controller
         'customer_email' => 'required|email|unique:customer_info',
         'customer_password' => 'required|min:8|max:20',
         'customer_cpassword' => 'required|min:8|max:20|same:customer_password',
-        'customer_phone' => 'required|int',
+        'customer_phone' => 'required',
         'customer_contact' => 'required',
         'checkbox'=>'required',
          ],[
@@ -111,54 +82,48 @@ class RegisterController extends Controller
          'customer_email.required' => 'Email is required.',      
          'customer_email.unique' => 'Your email has already existed.', 
          'customer_password.required' => 'Password is required.',        
-         'customer_password.min' => 'The Password field must be at least 5 characters.',
+         'customer_password.min' => 'The Password field must be at least 8 characters.',
          'customer_password.max' => 'The Password field may not be greater than 20 characters.',         
          'customer_cpassword.required' => 'Confirm Password is required.',
-         'customer_cpassword.min' => 'The Password field must be at least 5 characters.',
+         'customer_cpassword.min' => 'The Password field must be at least 8 characters.',
          'customer_cpassword.max' => 'The Password field may not be greater than 20 characters.',
          'customer_cpassword.same' => 'The Password and Confirm Password must match.',
-         'customer_phone.required' => 'Phone Number is required.',
-         'customer_phone.numeric' => 'Invalid Phone Number.',
+         'customer_phone.required' => 'Invalid Phone Number.',
          'customer_contact.required' => 'Address is required.',
-         'checkbox.required'=>'Please Read Teams and Conditons.'
+         'checkbox.required'=>'Please accept our Terms and Conditons.'
          ]);
+    }
 
-        $name=$request->input('customer_name');
-        Session::put('welcome-name',$name);
-        $gender=$request->input('gender');
-        $email=$request->input('customer_email');
-        Session::put('welcome-mail',$email);
-        $password=Hash::make($request->input('customer_password'));
-        $cpassword=Hash::make($request->input('customer_cpassword'));
-        $phone=$request->input('customer_phone');
-        $contact=$request->input('customer_contact');
-        $termscond=$request->input('checkbox');
-        $customer_info=new customer_info;
-        $customer_info->Customer_Name=$name;
-        $customer_info->gender_id=$gender;
-        $customer_info->Customer_Email=$email;
-        $customer_info->Password=$password;
-        $customer_info->Confirm_Password=$cpassword;
-        $customer_info->Customer_Phone=$phone;
-        $customer_info->Customer_Contact=$contact;
-        $customer_info->type_id=2;
-        $customer_info->Flag=1;
-        $customer_info->Terms_condition= $termscond;
-        $customer_info->save();
-        return redirect()->route('welcome-mail');
-        dd('You are successfully added all fields.');
-        
+    public function DoRegister(Request $request)
+    {
+        $this->formValidationPost($request);
+
+        Register::RegisterCusInfo(
+                $request->input('customer_name'),
+                $request->input('gender'),
+                $request->input('customer_email'),
+                Hash::make($request->input('customer_password')),
+                Hash::make($request->input('customer_cpassword')),
+                $request->input('customer_phone'),
+                $request->input('customer_contact'),
+                $request->input('checkbox')
+                );
+        //Email send process
+        $To_email=Session::put('email',$request->input('customer_email'));
+         Mail::send('emails.WelcomeMail',
+            array(
+                'name' => $request->input('customer_name'),
+                'email' => $request->input('customer_email'),
+                'phone' => $request->input('customer_phone')
+            ), function($message)
+        {
+            $email=Session::get('email');
+            $message->to($email, 'ool')->subject('Test');
+            Session::flush('email');
+        });
+        return redirect()->route('login'); 
     }
     
-      public function welcomeMail(request $request)
-    {
-        $to_email = Session::get('welcome-mail');
-        Mail::to($to_email)->send(new WelcomeMail);
-        return redirect()->route('login');
-        dd("Email has been sent Successfully");  
-    }
-
-   
-     }
+}
     
 
