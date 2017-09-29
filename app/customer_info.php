@@ -11,6 +11,6 @@ class customer_info extends Authenticatable {
 	const UPDATED_AT = 'updated_date';
     protected $table = 'customer_info';
     
-    protected $fillable=['Customer_Name','Customer_Email','Password','Confirm_Password','Customer_Phone','Customer_Contact','Flag'];
+    protected $fillable=['Customer_Name','gender_id','Customer_Email','Password','Confirm_Password','Customer_Phone','Customer_Contact','type_id','Flag','Terms_condition'];
 
 }

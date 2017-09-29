@@ -63,9 +63,13 @@ return view('pages.checkout');
 // route to process the form
 Route::get('register','Auth\RegisterController@GetGender');
 Route::post('register','Auth\RegisterController@formValidationPost');
-Route::post('register','Auth\RegisterController@DoRegister');
 
+Route::post('register',['as'=>'register','uses'=>'Auth\RegisterController@DoRegister']);
 
+//Route::post('login','Auth\LoginController@doLogin');
+Route::post('login',['as'=>'login','uses'=>'Auth\LoginController@doLogin'] );
+
+Route::get('logout',  'Auth\LoginController@logout');
 /*Route::post('login', 'Auth\LoginController@doLogin');
 
 Route::get('logout',  'Auth\LoginController@doLogout');

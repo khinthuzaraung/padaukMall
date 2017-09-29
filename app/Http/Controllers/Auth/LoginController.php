@@ -16,7 +16,6 @@ use DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Session;
-use Auth;
 use redirect;
 
 class LoginController extends Controller
@@ -51,75 +50,25 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
-    
-    public function doLogout()
+        public function logout(Request $request)
     {
-
-        /*Auth::logout();//logging out user
-        return redirect::to($redirectTo);*/
-
-       return view('pages.login');
-
+        $this->guard()->logout();
+ 
+        $request->session()->flush();
+ 
+        $request->session()->regenerate();
+ 
+        return redirect('login')
+            ->withSuccess('Terimakasih, selamat datang kembali!');
     }
 
-    public function doLogin()
+    public function doLogin(Request $request)
     {
-
-        /* $rules=array('email' =>'required|email' ,
-                      'password' => 'required|alphaNum|min:8');
-         $Validator=Validator::make(Input::all(),$rules);
-                    if ($validator->fails())
-                {
-                return Redirect::to('login')->withErrors($validator) // send back all errors to the login form
-                ->withInput(Input::except('password')); // send back the input (not the password) so that we can repopulate the form
-                }
-              else
-                {
- 
-                // create our user data for the authentication
- 
-                $userdata = array(
-                    'email' => Input::get('email') ,
-                    'password' => Input::get('password')
-                );
- 
-                // attempt to do the login
- 
-                if (Auth::attempt($userdata))
-                    {
- 
-                    // validation successful
-                    // do whatever you want on success
-                        return Redirect::to('index');
- 
-                    }
-                  else
-                    {
- 
-                    // validation not successful, send back to form
- 
-                    return Redirect::to('checklogin');
-                    }
-                }*/
-
-         $this->validate($request,[
-            'customer_email' => 'required|email',
-            'customer_password' => 'required',
-        ],[
-            'customer_email.required' => 'Email is required.',  
-            'customer_password.required' => 'Password is required.', 
-           
-        ]);
         $customer_info=new customer_info();
         $email=$request->input('customer_email');
         $password=$request->input('customer_password');
        
         $customer_info=Customer_info::where('Customer_Email',$email)->first();
-        $customer_info=DB::table('customer_info')
-                        ->where('Customer_Email','=',$email)
-                        //->where('Password','=',$password)
-                        ->first();
-
          
         if($customer_info && Hash::check($password,$customer_info->Password)) {
    
@@ -141,5 +90,6 @@ class LoginController extends Controller
             
   
 }
+
 
 

@@ -67,14 +67,14 @@
 @endforeach
 @endif
 </ul>
-											<!--<ul class="multi-column-dropdown">
+											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
 												<li><a href="products">Clothing</a></li>
 												<li><a href="products">Wallets</a></li>
 												<li><a href="products">Shoes</a></li>
 												<li><a href="products">Watches</a></li>
 												<li><a href="products">Accessories</a></li>
-											</ul>-->
+											</ul>
 										</div>
 										<div class="col-sm-4">
 											<ul class="multi-column-dropdown">

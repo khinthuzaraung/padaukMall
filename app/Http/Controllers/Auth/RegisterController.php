@@ -17,7 +17,6 @@ use View;
 use Session;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Hash;
-use App\Mail\WelcomeMail;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Register;
@@ -60,7 +59,7 @@ class RegisterController extends Controller
     {
         $gender = DB::table('gender')->get();
         return View::make("pages.register")->with('gender',$gender);
-       // return view('register');
+       
     }
 
     public function formValidationPost(Request $request)
@@ -89,16 +88,16 @@ class RegisterController extends Controller
          'customer_cpassword.min' => 'The Password field must be at least 8 characters.',
          'customer_cpassword.max' => 'The Password field may not be greater than 20 characters.',
          'customer_cpassword.same' => 'The Password and Confirm Password must match.',
-         'customer_phone.required' => 'Phone Number is required.',
          'customer_phone.required' => 'Invalid Phone Number.',
          'customer_contact.required' => 'Address is required.',
-         'checkbox.required'=>'Please check our Terms and Conditons.'
+         'checkbox.required'=>'Please accept our Terms and Conditons.'
          ]);
     }
 
     public function DoRegister(Request $request)
     {
         $this->formValidationPost($request);
+
         Register::RegisterCusInfo(
                 $request->input('customer_name'),
                 $request->input('gender'),
@@ -109,18 +108,22 @@ class RegisterController extends Controller
                 $request->input('customer_contact'),
                 $request->input('checkbox')
                 );
-        return redirect()->route('welcome-mail');
+        //Email send process
+        $To_email=Session::put('email',$request->input('customer_email'));
+         Mail::send('emails.WelcomeMail',
+            array(
+                'name' => $request->input('customer_name'),
+                'email' => $request->input('customer_email'),
+                'phone' => $request->input('customer_phone')
+            ), function($message)
+        {
+            $email=Session::get('email');
+            $message->to($email, 'ool')->subject('Test');
+            Session::flush('email');
+        });
+        return redirect()->route('login'); 
     }
     
-      public function welcomeMail()
-    {
-        $to_email = Session::get('welcome-mail');
-        Mail::to($to_email)->send(new WelcomeMail);
-        return redirect()->route('login');
-        dd("Email has been sent Successfully");  
-    }
-
-   
-     }
+}
     
 
