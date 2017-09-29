@@ -1,6 +1,7 @@
 <?php
 use App\Mail\Mail;
 use Illuminate\Mail\Mailable;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,10 @@ use Illuminate\Mail\Mailable;
 Route::get('/', function () {
 return view('pages.index');
 });
+/*Route::get('/', function() {
+        $categories = \App\sub_category::where('parent_id', null)->get();
+        return view('pages.index', compact('category'));
+    });*/
 
 Route::get('login',function(){
 return view('pages.login');
@@ -60,6 +65,7 @@ Route::get('checkout', function () {
 return view('pages.checkout');
 });
 
+
 // route to process the form
 Route::get('register','Auth\RegisterController@GetGender');
 Route::post('register','Auth\RegisterController@formValidationPost');
@@ -69,7 +75,7 @@ Route::post('register',['as'=>'register','uses'=>'Auth\RegisterController@DoRegi
 //Route::post('login','Auth\LoginController@doLogin');
 Route::post('login',['as'=>'login','uses'=>'Auth\LoginController@doLogin'] );
 
-Route::get('logout',  'Auth\LoginController@logout');
+//Route::get('logout',  'Auth\LoginController@logout');
 /*Route::post('login', 'Auth\LoginController@doLogin');
 
 Route::get('logout',  'Auth\LoginController@doLogout');

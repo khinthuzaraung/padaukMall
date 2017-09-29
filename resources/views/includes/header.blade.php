@@ -52,20 +52,18 @@
 								<ul class="dropdown-menu multi-column columns-3">
 									<div class="row">
 										<div class="col-sm-4">
-											<ul>@if(!empty($menu))
-@foreach($menu as $item)
-    <li>
-        <a href="{{$item->url}}">{{$item->menu_name}}</a>
-        @if ($item->submenu->count()) 
-            <ul class="multi-column-dropdown">
-            @foreach ($item->submenu as $subitem)
-                <li><a href="{{$subitem->url}}">{{$subitem->menu_name}}</a></li>
-            @endforeach
-            </ul>
-        @endif
-    </li>
+											<ul>
+@foreach($categories as $category)
+        <li>{{ $category->Category_name }}
+            @if(count( $category->subcatergory_name) > 0 )
+                <ul>
+                @foreach($category->subcatergory_name as $subcategory)
+                    <li>{{ $subcategory->subcatergory_name }}</li>
+                @endforeach 
+                </ul>
+            @endif
+        </li>                   
 @endforeach
-@endif
 </ul>
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
