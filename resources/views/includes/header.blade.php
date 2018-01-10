@@ -45,7 +45,11 @@
 					</div> 
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="/padaukmall/public" class="act">Home</a></li>	
+
+							<li class="active"><a href="index" class="act">Home</a></li>	
+
+						
+
 							<!-- Mega Menu -->
 							<li class="dropdown">
 								<a href="/padaukmall/products" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
@@ -53,18 +57,7 @@
 									<div class="row">
 										<div class="col-sm-4">
 											<ul>
-@foreach($categories as $category)
-        <li>{{ $category->Category_name }}
-            @if(count( $category->subcatergory_name) > 0 )
-                <ul>
-                @foreach($category->subcatergory_name as $subcategory)
-                    <li>{{ $subcategory->subcatergory_name }}</li>
-                @endforeach 
-                </ul>
-            @endif
-        </li>                   
-@endforeach
-</ul>
+
 											<ul class="multi-column-dropdown">
 												<h6>Men's Wear</h6>
 												<li><a href="products">Clothing</a></li>

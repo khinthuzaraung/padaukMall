@@ -20,6 +20,10 @@ return view('pages.index');
         return view('pages.index', compact('category'));
     });*/
 
+Route::get('index', function () {
+return view('pages.index');
+});
+
 Route::get('login',function(){
 return view('pages.login');
 });
@@ -66,6 +70,7 @@ return view('pages.checkout');
 });
 
 
+
 // route to process the form
 Route::get('register','Auth\RegisterController@GetGender');
 Route::post('register','Auth\RegisterController@formValidationPost');
@@ -75,33 +80,35 @@ Route::post('register',['as'=>'register','uses'=>'Auth\RegisterController@DoRegi
 //Route::post('login','Auth\LoginController@doLogin');
 Route::post('login',['as'=>'login','uses'=>'Auth\LoginController@doLogin'] );
 
+Route::get('sidebar', function () {
+return view('pages.sidebar');
+});
+Route::get('sidebar','CategoryController@categoryData');
 //Route::get('logout',  'Auth\LoginController@logout');
 /*Route::post('login', 'Auth\LoginController@doLogin');
 
 Route::get('logout',  'Auth\LoginController@doLogout');
 
+Route::get('sidebar', function () {
+return view('pages.sidebar');
+});
 
-//Route::get('pages/register','Auth\RegisterController@formValidation');//Register Form Validation
-//Route::post('pages/register','Auth\RegisterController@formValidationPost');//Register Form Validation
-//Route::post('login',['as'=> 'login','uses'=>'LoginController@postLogin']);
-//Route::post('login','Auth\LoginController@doLogin');
-//Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
 
-Route::get('register','Auth\RegisterController@GetGender');//Register Form Validation
+
+
+Route::get('register','Auth\RegisterController@formValidation');//Register Form Validation
 Route::post('register','Auth\RegisterController@formValidationPost');//Register Form Validation
-Route::post('register','Auth\RegisterController@DoRegister')
 //Route::post('login',['as'=> 'login','uses'=>'LoginController@postLogin']);
-//Route::post('login','Auth\LoginController@doLogin');
-//Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
-
-/*Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
+Route::post('login','Auth\LoginController@doLogin');
+Route::post('login',['as'=> 'login','uses'=>'Auth\LoginController@doLogin']);
+Route::get('welcome-mail',['as'=> 'welcome-mail','uses'=>'Auth\RegisterController@welcomeMail']);
 Route::get('forgotten',['as'=>'forgotten','uses'=>'Auth\ForgotPasswordController@getEmail']);
 Route::post('forgotten', 'Auth\ForgotPasswordController@postEmail');
 Route::get('getcode',['as'=> 'getcode','uses'=>'Auth\ForgotPasswordController@resetPassword']);
 Route::get('pwdreset',['as'=>'pwdreset','uses'=>'Auth\ResetPasswordController@rightCode']);
 Route::post('pwdreset',['as'=>'pwdreset','uses'=>'Auth\ResetPasswordController@typeCode']);
 Route::post('changeresetpwd',['as'=>'changeresetpwd','uses'=>'Auth\ResetPasswordController@changePassword']);
-Route::get('logout','Auth\LogoutController@doLogout');*/
-
+Route::get('logout','Auth\LogoutController@doLogout');
+Route::get('sidebar','CategoryController@categoryData');
 
 
